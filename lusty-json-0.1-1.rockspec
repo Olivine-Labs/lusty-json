@@ -1,11 +1,11 @@
 package = "lusty-json"
-version = "0.1-0"
+version = "0.1-1"
 source = {
-  url = "https://github.com/Olivine-Labs/lusty-json/v0.1.tar.gz",
-  dir = "lusty-json"
+  url = "https://github.com/Olivine-Labs/lusty-json/archive/v0.1.tar.gz",
+  dir = "lusty-json-0.1"
 }
 description = {
-  summary = "Json input and output for lusty.",
+  summary = "json input and output for lusty.",
   detailed = [[
     Input and output extensions for lusty
   ]],
