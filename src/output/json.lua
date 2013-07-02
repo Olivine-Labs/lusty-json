@@ -23,8 +23,8 @@ return {
       local accept = context.request.headers.accept
       local content = context.request.headers["content-type"]
 
-      return (accept and accept:find("application/json")) or
-             (content and content:find("application/json"))
+      return (accept and (accept:find("application/json") or accept:find("*/*")) or
+             (content and content:find("application/json") and not accept)
     end
   }
 }
