@@ -16,6 +16,11 @@ return {
 
   options = {
     predicate = function(context)
+
+      if context.output == nil then
+        return false
+      end
+
       if config.default then
         return true
       end
