@@ -2,7 +2,9 @@ local json = config.json
 
 return {
   handler = function(context)
-    context.input = json.decode(context.request.body)
+    pcall(function()
+      context.input = json.decode(context.request.body)
+    end)
   end,
 
   options = {
@@ -15,7 +17,7 @@ return {
 
       if context.request.body then
         if content then
-          return content == "application/json"
+          return content:find("application/json")
         else
           return true
         end
