@@ -1,5 +1,5 @@
 package = "lusty-json"
-version = "0.3-2"
+version = "0.3-3"
 source = {
   url = "https://github.com/Olivine-Labs/lusty-json/archive/v0.3.tar.gz",
   dir = "lusty-json-0.3"
