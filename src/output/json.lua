@@ -11,7 +11,14 @@ return {
       output = meta.__toView(output, context)
     end
 
-    context.response.send(json.encode(output))
+    local raw
+    if config.encodeEmptyTableAsArray and next(output) == nil then
+      raw = "[]"
+    else
+      raw = json.encode(output)
+    end
+
+    context.response.send(raw)
   end,
 
   options = {
